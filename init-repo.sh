@@ -1,8 +1,4 @@
-name=$1 # we take name of the repo from user
-if [ $# = '0' ]; then # check if user gives us name
-    echo "you haven't specified the name of the repo you want to create"
-    exit 1
-fi
+read -p "repo name: " name # we take name of the repo from user
 mkdir $name # we create directory with project, it is more convinient
 cd $name 
 echo "# $name" > readme.md # creating readme with the name of repo
